@@ -1,1 +1,1 @@
-# Добрый ден Богдан
+print("Hello teacher ")
