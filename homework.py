@@ -18,6 +18,8 @@ class restaurant:
             print("Обслужил клиента")
         else:
             self.popularity -=10
+            print(" НЕ Обслужил клиента")
+
 
     def clining(self):
         self.money -=5
