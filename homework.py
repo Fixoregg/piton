@@ -1,4 +1,10 @@
 import random
+import logging
+logging.basicConfig(level=logging.DEBUG,
+filename="logs.log", filemode="a",
+format="We have next logging message: "
+"%(asctime)s:%(levelname)s-%(message)s"
+)
 
 class restaurant:
 
@@ -16,6 +22,7 @@ class restaurant:
             self.ingredients -= 15
             self.popularity += 5
             print("Обслужил клиента")
+            logging.info("Когда ты готовишь ты получаешь деньги популярность но  теряешь ингридиенты")
         else:
             self.popularity -=10
             print(" НЕ Обслужил клиента")
@@ -25,6 +32,7 @@ class restaurant:
         self.money -=5
         self.popularity +=8
         print("Решил помыть пол")
+        logging.info("Когда ты юбираешься ты теряешь деньги на получаешь популярность")
 
     def money(self,):
         if self.money < 10:
@@ -34,8 +42,9 @@ class restaurant:
     def shoping(self):
         if self.ingredients < 20:
             self.money -=50
-            self.ingredients += 20
+            self.ingredients += 50
             print("Схожу в магазин")
+            logging.info("Когда ты скупаешься ты теряешь деньги но получаешь ингридиенты")
 
     def is_alive(self):
         if self.money < -10:
