@@ -26,9 +26,9 @@ from bs4 import BeautifulSoup
 response = requests.get("https://ru.investing.com/currencies/usd-uah")
 if response.status_code == 200:
     soup = BeautifulSoup(response.text, features="html.parser")
-    soup_list = soup.find_all("span",{"class":"text-2xl"})
+    soup_list = soup.find("span",{"class":"text-2xl"})
     # res = soup_list[0].find("span")
-    print(soup_list)
+    print(soup_list.text)
 
 # import requests
 # from bs4 import BeautifulSoup
