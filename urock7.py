@@ -32,7 +32,7 @@ if response.status_code == 200:
     print("введите количество доллоров")
     dollar = int(input())
     curs = soup_list.text
-    print(dollar * round(float(curs.replace(",","."))))
+    print(dollar * round(float(curs.replace(",",".")),3))
 
 # import requests
 # from bs4 import BeautifulSoup
