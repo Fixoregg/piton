@@ -29,6 +29,10 @@ if response.status_code == 200:
     soup_list = soup.find("span",{"class":"text-2xl"})
     # res = soup_list[0].find("span")
     print(soup_list.text)
+    print("введите количество доллоров")
+    dollar = int(input())
+    curs = soup_list.text
+    print(dollar * round(float(curs.replace(",","."))))
 
 # import requests
 # from bs4 import BeautifulSoup
