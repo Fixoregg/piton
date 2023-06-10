@@ -35,7 +35,7 @@ def send_welcome(message):
 
 @bot.message_handler(commands=['help'])
 def send_welcome(message):
-    bot.send_message(message.chat.id, 'Значит у нас есть команда /kek это шутка и /vafle это картинка')
+    bot.send_message(message.chat.id, 'Значит у нас есть команда /kek это шутка и /vafle это картинка, /shum это аудио')
 
 @bot.message_handler(commands=['shum'])
 def send_welcome(message):
